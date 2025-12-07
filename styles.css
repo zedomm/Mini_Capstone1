@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+}
+
+header {
+  height: 2px;
+  background: #0d0d7a;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.RowOne {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.RowOne img {
+  width: 250px;
+  height: auto;
+}
+
+.RowTwo {
+  width: 100%;
+}
+
+.Model_Background {
+  position: relative;
+  width: 100%;
+  height: 800px; /* You can change this height */
+  overflow: hidden;
+  border-radius: 50px;
+}
+
+/* IMAGE FIX: no stretching + no blurriness */
+.Model_Background img {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;  /* keeps proportions and prevents blur/stretch */
+  display: block;
+  border-radius: 50px;
+}
+
+/* DARK OVERLAY */
+.Model_Background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 700px;
+  background: rgba(0,0,0,0.5); /* adjust darkness 0.1 - 0.8 */
+  border-radius: 50px;
+}
+
+
